@@ -24,10 +24,10 @@ jobs:
           arch: 'clang_64'
           install-deps: 'true'
 
-      - name: Set up environment
-        run: |
-          echo "CMAKE_PREFIX_PATH=${{ env.Qt6_DIR }}" >> $GITHUB_ENV
-          echo "Qt6_DIR=${{ env.Qt6_DIR }}" >> $GITHUB_ENV
+      # - name: Set up environment
+      #   run: |
+      #     echo "CMAKE_PREFIX_PATH=${{ env.Qt6_DIR }}" >> $GITHUB_ENV
+      #     echo "Qt6_DIR=${{ env.Qt6_DIR }}" >> $GITHUB_ENV
          
       - name: Configure CMake
         run: cmake -B ${{github.workspace}}/build -DCMAKE_BUILD_TYPE=Release -DUSE_QT6='ON'
