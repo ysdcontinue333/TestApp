@@ -18,7 +18,10 @@ jobs:
       - name: Install Qt
         uses: jurplel/install-qt-action@v4
         with:
+          version: '5.15.2'
           host: 'mac'
+          target: 'desktop'
+          arch: 'clang_64'
           install-deps: 'true'
          
       - name: Configure CMake
