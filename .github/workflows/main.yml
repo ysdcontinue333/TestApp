@@ -30,7 +30,7 @@ jobs:
           echo "Qt6_DIR=${{ env.Qt6_DIR }}" >> $GITHUB_ENV
          
       - name: Configure CMake
-        run: cmake -B ${{github.workspace}}/build -DCMAKE_BUILD_TYPE=Release
+        run: cmake -B ${{github.workspace}}/build -DCMAKE_BUILD_TYPE=Release -DUSE_QT6='ON'
         
       - name: Build
         run: cmake --build ${{github.workspace}}/build --config Release
